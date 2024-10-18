@@ -26,26 +26,29 @@
         />
       </div>
       <div class="checkbox-group">
-        <label>
+        <label for="numbers">
           <input type="checkbox" id="numbers" />
           Include Numbers
         </label>
-        <label>
+        <label for="lowercase">
           <input type="checkbox" id="lowercase" />
           Include Lowercase
         </label>
-        <label>
+        <label for="uppercase">
           <input type="checkbox" id="uppercase" />
           Include Uppercase
         </label>
-        <label>
+        <label for="symbols">
           <input type="checkbox" id="symbols" />
           Include Symbols
         </label>
       </div>
       <div class="input-group">
-        <button type="button" id="generateButton">Generate Password</button>
+        <button type="button" onclick="generatePassword()">
+          Generate Password
+        </button>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
