@@ -88,3 +88,27 @@ body {
   cursor: pointer;
   accent-color: #28a745;
 }
+
+@media (max-width: 600px) {
+  .container {
+    width: 350px;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .input-group label,
+  .checkbox-group label {
+    font-size: 14px;
+  }
+
+  .input-group input[type="text"],
+  .input-group input[type="number"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .input-group button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
