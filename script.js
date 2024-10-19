@@ -1,9 +1,9 @@
+const result = document.getElementById("result");
 const generatePassword = () => {
   const numbers = document.getElementById("numbers").checked;
   const lowercase = document.getElementById("lowercase").checked;
   const uppercase = document.getElementById("uppercase").checked;
   const symbols = document.getElementById("symbols").checked;
-  const result = document.getElementById("result");
   const lengthOfNum = parseInt(
     document.getElementById("lengthOfNum").value,
     10
@@ -28,4 +28,20 @@ const generatePassword = () => {
   }
 
   result.value = password;
+};
+
+const copyPass = () => {
+  const password = result.value;
+  if (!password) {
+    alert("There is no password to copy.");
+    return;
+  }
+  navigator.clipboard
+    .writeText(password)
+    .then(() => {
+      alert("Password copied!");
+    })
+    .catch((err) => {
+      console.log("Error copying password: ", err);
+    });
 };
